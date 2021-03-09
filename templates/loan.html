@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wypozycz</title>
+</head>
+<body>
+{% include '/top.html' %}
+<br>
+<br>
+<form action="/loan" method="POST">
+    <select name="client_id">
+        {% for client in clients %}
+            <option value="{{ client.0 }}">{{ client.1 }} {{ client.2 }}</option>
+        {% endfor %}
+    </select>
+    <select name="book_id">
+        {% for book in books %}
+            <option value="{{ book.0 }}">{{ book.2 }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Loan</button>
+</form>
+</body>
+</html>

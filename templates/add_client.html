@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj film</title>
+</head>
+<body>
+{% include '/top.html' %}
+    {% if sukces %}
+        <h1>Sukces! Dodac kolejny?</h1>
+    {% endif %}
+    <form method="post">
+        <p>Imie: <input type="text" name="first_name"></p>
+        <p>Nazwisko: <input type="text" name="last_name"></p>
+        <input type="submit" value="Dodaj klienta do bazy">
+    </form>
+</body>
+</html>

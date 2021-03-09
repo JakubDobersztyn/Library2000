@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klient szczegoly</title>
+</head>
+<body>
+{% include '/top.html' %}
+    <h1>{{ client.0.0 }} {{ client.0.1 }}</h1>
+    {% for books in client %}
+        {% if books.2 %}
+            <li><a href="/book_detail/{{ client.3 }}">{{ books.2 }}</a></li>
+        {% endif %}
+    {% endfor %}
+<br>
+<form action="/del_client/{{ client.0.4 }}">
+    <input type="submit" value="del a client">
+</form>
+</body>
+</html>

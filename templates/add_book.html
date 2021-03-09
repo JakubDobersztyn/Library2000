@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj film</title>
+</head>
+<body>
+{% include '/top.html' %}
+    {% if sukces %}
+        <h1>Sukces! Dodac kolejny?</h1>
+    {% endif %}
+    <form method="post">
+        <p>ISBN: <input type="text" name="book_isbn"></p>
+        <p>Tytuł: <input type="text" name="book_name"></p>
+        <p>Opis: <input type="text" name="book_desc"></p>
+        <p>Author ID: <input type="text" name="book_author"></p>
+        <input type="submit" value="Dodaj książkę do bazy">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOKS</title>
+</head>
+<body>
+{% include '/top.html' %}
+<ul>
+    {% for book in books %}
+        <li><a href="/book_detail/{{ book.0 }}">{{ book.2 }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

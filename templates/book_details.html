@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book info</title>
+</head>
+<body>
+{% include '/top.html' %}
+    {% if sukces %}
+        <h1>Sukces! Dodac kolejny?</h1>
+    {% endif %}
+    <form method="post">
+        <p>Nazwa: <input type="text" name="movie_title" value="{{ film.0 }}"></p>
+        <p>Opis: <input type="text" name="movie_desc" value="{{ film.1 }}"></p>
+        <p>Ocena: <input type="number" name="movie_rating" value="{{ film.2 }}"></p>
+        <input type="submit" value="Edytuj film w bazie">
+    </form>
+</body>
+</html>
